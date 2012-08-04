@@ -1,0 +1,7 @@
+# vim: set ft=ruby:
+
+root = File.expand_path(File.dirname(__FILE__))
+
+Dir.glob("#{root}/conf.d/*.rb") do |file|
+  require file
+end
