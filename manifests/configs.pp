@@ -22,4 +22,10 @@ class bluepill::configs(
     source => 'puppet:///modules/bluepill/bluepill.pill',
     owner  => root, group => root, mode => '0644'
   }
+
+  file { '/etc/init.d/bluepill':
+    ensure => present,
+    source => 'puppet:///modules/bluepill/init.d/bluepill',
+    owner  => root, group => root, mode => '0755'
+  }
 }

@@ -9,4 +9,5 @@ describe 'bluepill::configs' do
   it { should contain_file('/var/bluepill').with_ensure('directory') }
   it { should contain_file('/etc/bluepill').with_ensure('directory') }
   it { should contain_file('/etc/bluepill/conf.d').with_ensure('directory') }
+  it { should contain_file('/etc/init.d/bluepill').with_ensure('present') }
 end
